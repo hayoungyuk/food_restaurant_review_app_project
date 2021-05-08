@@ -1,0 +1,14 @@
+{%extends 'basic.html'%}
+
+{% block content %}
+<h1>✔맛집시그널 수정하기</h1>
+
+<form action="{%url 'reupload' foodapp.id %}" method="post">
+    {%csrf_token%}
+    <h3><p>맛집 위치 : <input type="text" name="location" value = "{{foodapp.location}}"></p></h3>
+    <h3><p>쩝쩝박사 : <input type="text" name="eater" value = "{{foodapp.eater}}"></p></h3>
+    맛집 설명: <textarea name="content" id="" cols="40" rows="20">{{foodapp.content}}</textarea>
+    <button type="submit" class="btn btn-warning">업로드</button>
+
+</form>
+{% endblock %}

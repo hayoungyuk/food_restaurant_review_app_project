@@ -1,0 +1,16 @@
+{%extends 'basic.html'%}
+
+{% block content %}
+<h1>⌂{{foodapp.location}}</h1>
+<p>
+<h3><p>쩝쩝박사 : {{foodapp.eater}}</p></h3>
+<h3><p>작성일 : {{foodapp.date}}</p></h3>
+</p>
+<hr>
+{% if foodapp.photos %}
+<p><img src="{{foodapp.photos.url}}" alt=""></p>
+{% endif %}
+<div class="box2"><p>{{foodapp.content}}</p></div>
+<a href="{% url 'revise' foodapp.id %}" class="btn btn-warning">수정하기</a>
+<a href="{% url 'remove' foodapp.id %}" class="btn btn-warning">삭제하기</a>
+{% endblock %}
