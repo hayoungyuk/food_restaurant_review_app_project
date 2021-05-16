@@ -23,4 +23,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('',begin,name='begin'),
     path('foodapp/',include('foodapp.urls')),
+    path('calapp/',include('calapp.urls')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

@@ -38,7 +38,10 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'foodapp.apps.FoodappConfig',
-    'static',
+    'calapp',
+
+    #provider
+    'imagekit',
 ]
 
 MIDDLEWARE = [
@@ -122,7 +125,8 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'foodapp', 'static')]
+    os.path.join(BASE_DIR, 'foodapp', 'static'), 
+    os.path.join(BASE_DIR, 'calapp', 'static')]
 #현재 static파일들이 어디에 있는지의 경로
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 #static파일을 어디에 모을건지

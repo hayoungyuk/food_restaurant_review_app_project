@@ -8,6 +8,7 @@
 {% for foodapp in foodapps%}
     <div class="box1">
     <h2>🍴{{foodapp.location}}</h2>
+    <p class = "photos"><img src="{{foodapp.photos_thumbnail.url}}"></p>
     <h3>쩝쩝박사 : {{foodapp.eater}}</h3>
     <h3>평점 : {{foodapp.summary}}</h3>
     <h2><a href = "{%url 'exact' foodapp.id%}" class="btn btn-warning">궁금해요!</a></h2>
